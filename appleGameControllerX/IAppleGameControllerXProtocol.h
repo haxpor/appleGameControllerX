@@ -41,20 +41,20 @@ namespace controllerX {
         virtual ~IAppleGameControllerXGamepadProfileAnalogProtocol() {}
         
         // A, B, X, Y
-        virtual void onGamepadProfile_buttonA_valueChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_buttonB_valueChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_buttonY_valueChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_buttonX_valueChanged(float value, bool pressed) = 0;
+        virtual void onGamepadProfile_buttonA_valueChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_buttonB_valueChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_buttonY_valueChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_buttonX_valueChanged(float value, bool pressed) {}
         
         // D-Pad
-        virtual void onGamepadProfile_DpadLeft_valueChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_DpadRight_valueChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_DpadUp_valueChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_DpadDown_valueChanged(float value, bool pressed) = 0;
+        virtual void onGamepadProfile_DpadLeft_valueChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_DpadRight_valueChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_DpadUp_valueChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_DpadDown_valueChanged(float value, bool pressed) {}
         
         // shoulder button
-        virtual void onGamepadProfile_leftShoulder_valueChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_rightShoulder_valueChanged(float value, bool pressed) = 0;
+        virtual void onGamepadProfile_leftShoulder_valueChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_rightShoulder_valueChanged(float value, bool pressed) {}
     };
         
     class IAppleGameControllerXGamepadProfileDigitalProtocol
@@ -63,20 +63,20 @@ namespace controllerX {
         virtual ~IAppleGameControllerXGamepadProfileDigitalProtocol() {}
         
         // A, B, X, Y
-        virtual void onGamepadProfile_buttonA_pressedChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_buttonB_pressedChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_buttonY_pressedChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_buttonX_pressedChanged(float value, bool pressed) = 0;
+        virtual void onGamepadProfile_buttonA_pressedChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_buttonB_pressedChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_buttonY_pressedChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_buttonX_pressedChanged(float value, bool pressed) {}
         
         // D-Pad
-        virtual void onGamepadProfile_DpadLeft_pressedChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_DpadRight_pressedChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_DpadUp_pressedChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_DpadDown_pressedChanged(float value, bool pressed) = 0;
+        virtual void onGamepadProfile_DpadLeft_pressedChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_DpadRight_pressedChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_DpadUp_pressedChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_DpadDown_pressedChanged(float value, bool pressed) {}
         
         // shoulder button
-        virtual void onGamepadProfile_leftShoulder_pressedChanged(float value, bool pressed) = 0;
-        virtual void onGamepadProfile_rightShoulder_pressedChanged(float value, bool pressed) = 0;
+        virtual void onGamepadProfile_leftShoulder_pressedChanged(float value, bool pressed) {}
+        virtual void onGamepadProfile_rightShoulder_pressedChanged(float value, bool pressed) {}
     };
     
     class IAppleGameControllerXExtendedGamepadProfileProtocol

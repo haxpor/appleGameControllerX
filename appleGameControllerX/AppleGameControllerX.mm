@@ -95,6 +95,14 @@ controllerX::AppleGameControllerX_SupportExtendedGamepad AppleGameControllerX::s
     return [_controllerObjcPtr supportExtendedGamepadAt:index];
 }
 
+void AppleGameControllerX::unsetAllDelegatesExceptConnectionDelegete()
+{
+    this->setControllerXPauseHandlerDelegate(nil);
+    this->setControllerXGamepadProfileAnalogDelegate(nil);
+    this->setControllerXGamepadProfileDigitalDelegate(nil);
+    this->setControllerXExtendedGamepadProfileDelegate(nil);
+}
+
 void AppleGameControllerX::unsetAllDelegates()
 {
     this->setControllerXConnectionDelegate(nil);

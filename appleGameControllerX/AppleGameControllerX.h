@@ -40,6 +40,7 @@ public:
     int connectedControllersCount();
     controllerX::AppleGameControllerX_SupportExtendedGamepad supportExtendedGamepadAt(int index);
     
+    void unsetAllDelegatesExceptConnectionDelegete();
     void unsetAllDelegates();
     
     void purgeInstance();
