@@ -19,7 +19,7 @@
     self = [super init];
     if (self)
     {
-        
+        // nothing at the moment ...
     }
     return self;
 }
@@ -227,6 +227,9 @@
 
 - (void)dealloc
 {
+    _controller = nil;
+    [self stopWirelessControllerDiscovery];
+    
     // remove observers
     [[NSNotificationCenter defaultCenter] removeObserver:self name:GCControllerDidConnectNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:GCControllerDidDisconnectNotification object:nil];

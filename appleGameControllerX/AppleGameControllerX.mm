@@ -14,16 +14,15 @@
 using namespace controllerX;
 
 static AppleGameControllerX *s_sharedInstance = NULL;
+AppleGameControllerX_objcPtr AppleGameControllerX::_controllerObjcPtr = nil;
 
-AppleGameControllerX::AppleGameControllerX():
-_controllerObjcPtr(nil)
+AppleGameControllerX::AppleGameControllerX()
 {
-    _controllerObjcPtr = [[AppleGameControllerX_objc alloc] init];
 }
 
 AppleGameControllerX::~AppleGameControllerX()
 {
-    
+
 }
 
 AppleGameControllerX* AppleGameControllerX::sharedInstance()
@@ -31,6 +30,7 @@ AppleGameControllerX* AppleGameControllerX::sharedInstance()
     if (s_sharedInstance == NULL)
     {
         s_sharedInstance = new AppleGameControllerX();
+        _controllerObjcPtr = [[AppleGameControllerX_objc alloc] init];
     }
     return s_sharedInstance;
 }
@@ -110,5 +110,7 @@ void AppleGameControllerX::purgeInstance()
     {
         delete s_sharedInstance;
         s_sharedInstance = NULL;
+        
+        _controllerObjcPtr = nil;
     }
 }

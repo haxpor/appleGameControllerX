@@ -33,6 +33,14 @@ CCScene* HelloWorld::scene()
     return scene;
 }
 
+void HelloWorld::onExit()
+{
+    // unset all delegates as set in this scene for AppleGameController
+    AppleGameControllerX::sharedInstance()->unsetAllDelegates();
+    
+    CCLayer::onExit();
+}
+
 void HelloWorld::handleReward(intptr_t rewardKey, int rewardValue, bool isLastReward)
 {
     if(rewardKey == 1)

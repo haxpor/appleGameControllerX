@@ -15,6 +15,8 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::CCScene* scene();
     
+    virtual void onExit();
+    
     // a selector callback
     void menuCloseCallback(CCObject* pSender);
     void openFacebookURL(CCObject* pSender);

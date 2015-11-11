@@ -46,7 +46,7 @@ public:
     static AppleGameControllerX* sharedInstance();
     
 private:
-    AppleGameControllerX_objcPtr _controllerObjcPtr;
+    static AppleGameControllerX_objcPtr _controllerObjcPtr;
 };
     
 }
