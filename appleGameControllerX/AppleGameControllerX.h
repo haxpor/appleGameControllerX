@@ -31,6 +31,8 @@ public:
     void setControllerXGamepadProfileAnalogDelegate(controllerX::IAppleGameControllerXGamepadProfileAnalogProtocol* delegate);
     void setControllerXGamepadProfileDigitalDelegate(controllerX::IAppleGameControllerXGamepadProfileDigitalProtocol* delegate);
     void setControllerXExtendedGamepadProfileDelegate(controllerX::IAppleGameControllerXExtendedGamepadProfileProtocol* delegate);
+    void setControllerXExtendedGamepadProfileAnalogDelegete(controllerX::IAppleGameControllerXExtendedGamepadProfileAnalogProtocol* delegate);
+    void setControllerXExtendedGamepadProfileDigitalDelegate(controllerX::IAppleGameControllerXExtendedGamepadProfileDigitalProtocol* delegate);
     
     void startWirelessControllerDiscovery();
     void stopWirelessControllerDiscovery();

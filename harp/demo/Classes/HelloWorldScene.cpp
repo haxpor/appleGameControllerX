@@ -137,6 +137,7 @@ bool HelloWorld::init()
     AppleGameControllerX::sharedInstance()->setControllerXPauseHandlerDelegate(this);
     AppleGameControllerX::sharedInstance()->setControllerXGamepadProfileDigitalDelegate(this);
     AppleGameControllerX::sharedInstance()->setControllerXExtendedGamepadProfileDelegate(this);
+    AppleGameControllerX::sharedInstance()->setControllerXExtendedGamepadProfileDigitalDelegate(this);
     AppleGameControllerX::sharedInstance()->startWirelessControllerDiscovery();
     
     return true;
@@ -255,4 +256,20 @@ void HelloWorld::onExtendedGamepadProfile_leftThumbstick_valueChanged(float xVal
 void HelloWorld::onExtendedGamepadProfile_rightThumbstick_valueChanged(float xValue, float yValue)
 {
     CCLOG("Right thumbstick : %f %f", xValue, yValue);
+}
+
+void HelloWorld::onExtendedGamepadProfile_leftTrigger_pressedChanged(float value, bool pressed)
+{
+    if (pressed)
+        CCLOG("Left trigger is pressed");
+    else
+        CCLOG("Left trigger is released");
+}
+
+void HelloWorld::onExtendedGamepadProfile_rightTrigger_pressedChanged(float value, bool pressed)
+{
+    if (pressed)
+        CCLOG("Right trigger is pressed");
+    else
+        CCLOG("Right trigger is released");
 }

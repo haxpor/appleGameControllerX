@@ -10,11 +10,6 @@
 
 #include "IAppleGameControllerXProtocol.h"
 
-#pragma mark Interface typedef
-/*typedef controllerX::IAppleGameControllerXConnectionProtocol* IAppleGameControllerXConnectionProtocol;
-typedef controllerX::IAppleGameControllerXPauseHandlerProtocol* IAppleGameControllerXPauseHandlerProtocol;
-typedef controllerX::IAppleGameControllerXGamepadProfileProtocol* IAppleGameControllerXGamepadProfileProtocol;*/
-
 @interface AppleGameControllerX_objc : NSObject
 
 @property (nonatomic, assign) controllerX::IAppleGameControllerXConnectionProtocol* controllerX_connectionDelegate;
@@ -22,6 +17,8 @@ typedef controllerX::IAppleGameControllerXGamepadProfileProtocol* IAppleGameCont
 @property (nonatomic, assign) controllerX::IAppleGameControllerXGamepadProfileAnalogProtocol* controllerX_gamepadAnalogDelegate;
 @property (nonatomic, assign) controllerX::IAppleGameControllerXGamepadProfileDigitalProtocol* controllerX_gamepadDigitalDelegate;
 @property (nonatomic, assign) controllerX::IAppleGameControllerXExtendedGamepadProfileProtocol* controllerX_extendedGamepadDelegate;
+@property (nonatomic, assign) controllerX::IAppleGameControllerXExtendedGamepadProfileAnalogProtocol* controllerX_extendedGamepadAnalogDelegate;
+@property (nonatomic, assign) controllerX::IAppleGameControllerXExtendedGamepadProfileDigitalProtocol* controllerX_extendedGamepadDigitalDelegate;
 
 - (instancetype)init;
 - (void)startWirelessControllerDiscovery;

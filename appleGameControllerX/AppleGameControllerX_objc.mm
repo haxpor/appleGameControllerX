@@ -152,6 +152,7 @@
     }
     if (_controller.extendedGamepad)
     {
+        // Basic
         // two thumbsticks
         _controller.extendedGamepad.leftThumbstick.valueChangedHandler = ^(GCControllerDirectionPad *dpad, float xValue, float yValue)
         {
@@ -162,6 +163,30 @@
         {
             if (weakSelf.controllerX_extendedGamepadDelegate)
                 weakSelf.controllerX_extendedGamepadDelegate->onExtendedGamepadProfile_rightThumbstick_valueChanged(xValue, yValue);
+        };
+        
+        // Analog
+        _controller.extendedGamepad.leftTrigger.valueChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed)
+        {
+            if (weakSelf.controllerX_extendedGamepadAnalogDelegate)
+                weakSelf.controllerX_extendedGamepadAnalogDelegate->onExtendedGamepadProfile_leftTrigger_valueChanged(value, pressed);
+        };
+        _controller.extendedGamepad.rightTrigger.valueChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed)
+        {
+            if (weakSelf.controllerX_extendedGamepadAnalogDelegate)
+                weakSelf.controllerX_extendedGamepadAnalogDelegate->onExtendedGamepadProfile_rightTrigger_valueChanged(value, pressed);
+        };
+        
+        // Digital
+        _controller.extendedGamepad.leftTrigger.pressedChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed)
+        {
+            if (weakSelf.controllerX_extendedGamepadDigitalDelegate)
+                weakSelf.controllerX_extendedGamepadDigitalDelegate->onExtendedGamepadProfile_leftTrigger_pressedChanged(value, pressed);
+        };
+        _controller.extendedGamepad.rightTrigger.pressedChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed)
+        {
+            if (weakSelf.controllerX_extendedGamepadDigitalDelegate)
+                weakSelf.controllerX_extendedGamepadDigitalDelegate->onExtendedGamepadProfile_rightTrigger_pressedChanged(value, pressed);
         };
     }
     

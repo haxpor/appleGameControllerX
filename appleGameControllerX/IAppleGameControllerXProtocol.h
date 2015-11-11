@@ -78,14 +78,33 @@ namespace controllerX {
         virtual void onGamepadProfile_leftShoulder_pressedChanged(float value, bool pressed) = 0;
         virtual void onGamepadProfile_rightShoulder_pressedChanged(float value, bool pressed) = 0;
     };
-        
-    class   IAppleGameControllerXExtendedGamepadProfileProtocol
+    
+    class IAppleGameControllerXExtendedGamepadProfileProtocol
     {
     public:
         virtual ~IAppleGameControllerXExtendedGamepadProfileProtocol() {}
         
         virtual void onExtendedGamepadProfile_leftThumbstick_valueChanged(float xValue, float yValue) = 0;
         virtual void onExtendedGamepadProfile_rightThumbstick_valueChanged(float xValue, float yValue) = 0;
+    };
+        
+    class IAppleGameControllerXExtendedGamepadProfileAnalogProtocol
+    {
+    public:
+        virtual ~IAppleGameControllerXExtendedGamepadProfileAnalogProtocol() {}
+        
+        virtual void onExtendedGamepadProfile_leftTrigger_valueChanged(float value, bool pressed) = 0;
+        
+        virtual void onExtendedGamepadProfile_rightTrigger_valueChanged(float value, bool pressed) = 0;
+    };
+    
+    class IAppleGameControllerXExtendedGamepadProfileDigitalProtocol
+    {
+    public:
+        virtual ~IAppleGameControllerXExtendedGamepadProfileDigitalProtocol() {}
+        
+        virtual void onExtendedGamepadProfile_leftTrigger_pressedChanged(float value, bool pressed) = 0;
+        virtual void onExtendedGamepadProfile_rightTrigger_pressedChanged(float value, bool pressed) = 0;
     };
 }
 

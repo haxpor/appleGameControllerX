@@ -60,6 +60,16 @@ void AppleGameControllerX::setControllerXExtendedGamepadProfileDelegate(controll
     _controllerObjcPtr.controllerX_extendedGamepadDelegate = delegate;
 }
 
+void AppleGameControllerX::setControllerXExtendedGamepadProfileAnalogDelegete(controllerX::IAppleGameControllerXExtendedGamepadProfileAnalogProtocol *delegate)
+{
+    _controllerObjcPtr.controllerX_extendedGamepadAnalogDelegate = delegate;
+}
+
+void AppleGameControllerX::setControllerXExtendedGamepadProfileDigitalDelegate(controllerX::IAppleGameControllerXExtendedGamepadProfileDigitalProtocol *delegate)
+{
+    _controllerObjcPtr.controllerX_extendedGamepadDigitalDelegate = delegate;
+}
+
 void AppleGameControllerX::startWirelessControllerDiscovery()
 {
     [_controllerObjcPtr startWirelessControllerDiscovery];
