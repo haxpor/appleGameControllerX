@@ -105,6 +105,18 @@
                 weakSelf.controllerX_gamepadAnalogDelegate->onGamepadProfile_DpadDown_valueChanged(value, pressed);
         };
         
+        //      shoulder buttons
+        _controller.gamepad.leftShoulder.valueChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed)
+        {
+            if (weakSelf.controllerX_gamepadAnalogDelegate)
+                weakSelf.controllerX_gamepadAnalogDelegate->onGamepadProfile_leftShoulder_valueChanged(value, pressed);
+        };
+        _controller.gamepad.rightShoulder.valueChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed)
+        {
+            if (weakSelf.controllerX_gamepadAnalogDelegate)
+                weakSelf.controllerX_gamepadAnalogDelegate->onGamepadProfile_rightShoulder_valueChanged(value, pressed);
+        };
+        
         // Digital
         //      A, B, X, Y
         _controller.gamepad.buttonA.pressedChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed)
@@ -148,6 +160,18 @@
         {
             if (weakSelf.controllerX_gamepadDigitalDelegate)
                 weakSelf.controllerX_gamepadDigitalDelegate->onGamepadProfile_DpadDown_pressedChanged(value, pressed);
+        };
+        
+        //      shoulder buttons
+        _controller.gamepad.leftShoulder.pressedChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed)
+        {
+            if (weakSelf.controllerX_gamepadDigitalDelegate)
+                weakSelf.controllerX_gamepadDigitalDelegate->onGamepadProfile_leftShoulder_pressedChanged(value, pressed);
+        };
+        _controller.gamepad.rightShoulder.pressedChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed)
+        {
+            if (weakSelf.controllerX_gamepadDigitalDelegate)
+                weakSelf.controllerX_gamepadDigitalDelegate->onGamepadProfile_rightShoulder_pressedChanged(value, pressed);
         };
     }
     if (_controller.extendedGamepad)
