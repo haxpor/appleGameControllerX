@@ -5,7 +5,7 @@
 #include "PushRewardManager.h"
 #include "AppleGameControllerX.h"
 
-class HelloWorld : public cocos2d::CCLayer, private harp::IPushRewardDelegate, public controllerX::IAppleGameControllerXConnectionProtocol, public controllerX::IAppleGameControllerXGamepadProfileDigitalProtocol, public controllerX::IAppleGameControllerXPauseHandlerProtocol
+class HelloWorld : public cocos2d::CCLayer, private harp::IPushRewardDelegate, public controllerX::IAppleGameControllerXConnectionProtocol, public controllerX::IAppleGameControllerXGamepadProfileDigitalProtocol, public controllerX::IAppleGameControllerXPauseHandlerProtocol, public controllerX::IAppleGameControllerXExtendedGamepadProfileProtocol
 {
 public:
     virtual ~HelloWorld();
@@ -43,6 +43,10 @@ public:
     // shoulder button
     virtual void onGamepadProfile_leftShoulder_pressedChanged(float value, bool pressed);
     virtual void onGamepadProfile_rightShoulder_pressedChanged(float value, bool pressed);
+    
+    // thumbstick
+    virtual void onExtendedGamepadProfile_leftThumbstick_valueChanged(float xValue, float yValue);
+    virtual void onExtendedGamepadProfile_rightThumbstick_valueChanged(float xValue, float yValue);
     
     // implement the "static node()" method manually
     CREATE_FUNC(HelloWorld);

@@ -136,6 +136,7 @@ bool HelloWorld::init()
     AppleGameControllerX::sharedInstance()->setControllerXConnectionDelegate(this);
     AppleGameControllerX::sharedInstance()->setControllerXPauseHandlerDelegate(this);
     AppleGameControllerX::sharedInstance()->setControllerXGamepadProfileDigitalDelegate(this);
+    AppleGameControllerX::sharedInstance()->setControllerXExtendedGamepadProfileDelegate(this);
     AppleGameControllerX::sharedInstance()->startWirelessControllerDiscovery();
     
     return true;
@@ -244,4 +245,14 @@ void HelloWorld::onGamepadProfile_rightShoulder_pressedChanged(float value, bool
 {
     if (pressed)
         CCLOG("[ControllerX] Right shoulder button is pressed");
+}
+
+void HelloWorld::onExtendedGamepadProfile_leftThumbstick_valueChanged(float xValue, float yValue)
+{
+    CCLOG("Left thumbstick : %f %f", xValue, yValue);
+}
+
+void HelloWorld::onExtendedGamepadProfile_rightThumbstick_valueChanged(float xValue, float yValue)
+{
+    CCLOG("Right thumbstick : %f %f", xValue, yValue);
 }

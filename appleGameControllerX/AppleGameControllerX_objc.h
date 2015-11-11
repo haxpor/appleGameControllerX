@@ -21,6 +21,7 @@ typedef controllerX::IAppleGameControllerXGamepadProfileProtocol* IAppleGameCont
 @property (nonatomic, assign) controllerX::IAppleGameControllerXPauseHandlerProtocol* controllerX_pauseHandlerDelegate;
 @property (nonatomic, assign) controllerX::IAppleGameControllerXGamepadProfileAnalogProtocol* controllerX_gamepadAnalogDelegate;
 @property (nonatomic, assign) controllerX::IAppleGameControllerXGamepadProfileDigitalProtocol* controllerX_gamepadDigitalDelegate;
+@property (nonatomic, assign) controllerX::IAppleGameControllerXExtendedGamepadProfileProtocol* controllerX_extendedGamepadDelegate;
 
 - (instancetype)init;
 - (void)startWirelessControllerDiscovery;

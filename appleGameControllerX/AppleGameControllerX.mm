@@ -55,6 +55,11 @@ void AppleGameControllerX::setControllerXGamepadProfileDigitalDelegate(controlle
     _controllerObjcPtr.controllerX_gamepadDigitalDelegate = delegate;
 }
 
+void AppleGameControllerX::setControllerXExtendedGamepadProfileDelegate(controllerX::IAppleGameControllerXExtendedGamepadProfileProtocol *delegate)
+{
+    _controllerObjcPtr.controllerX_extendedGamepadDelegate = delegate;
+}
+
 void AppleGameControllerX::startWirelessControllerDiscovery()
 {
     [_controllerObjcPtr startWirelessControllerDiscovery];
@@ -78,6 +83,15 @@ int AppleGameControllerX::connectedControllersCount()
 controllerX::AppleGameControllerX_SupportExtendedGamepad AppleGameControllerX::supportExtendedGamepadAt(int index)
 {
     return [_controllerObjcPtr supportExtendedGamepadAt:index];
+}
+
+void AppleGameControllerX::unsetAllDelegates()
+{
+    this->setControllerXConnectionDelegate(nil);
+    this->setControllerXPauseHandlerDelegate(nil);
+    this->setControllerXGamepadProfileAnalogDelegate(nil);
+    this->setControllerXGamepadProfileDigitalDelegate(nil);
+    this->setControllerXExtendedGamepadProfileDelegate(nil);
 }
 
 void AppleGameControllerX::purgeInstance()

@@ -152,7 +152,17 @@
     }
     if (_controller.extendedGamepad)
     {
-        
+        // two thumbsticks
+        _controller.extendedGamepad.leftThumbstick.valueChangedHandler = ^(GCControllerDirectionPad *dpad, float xValue, float yValue)
+        {
+            if (weakSelf.controllerX_extendedGamepadDelegate)
+                weakSelf.controllerX_extendedGamepadDelegate->onExtendedGamepadProfile_leftThumbstick_valueChanged(xValue, yValue);
+        };
+        _controller.extendedGamepad.rightThumbstick.valueChangedHandler = ^(GCControllerDirectionPad *dpad, float xValue, float yValue)
+        {
+            if (weakSelf.controllerX_extendedGamepadDelegate)
+                weakSelf.controllerX_extendedGamepadDelegate->onExtendedGamepadProfile_rightThumbstick_valueChanged(xValue, yValue);
+        };
     }
     
     if (self.controllerX_connectionDelegate)

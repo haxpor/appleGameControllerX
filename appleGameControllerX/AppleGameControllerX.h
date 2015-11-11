@@ -30,12 +30,15 @@ public:
     void setControllerXPauseHandlerDelegate(controllerX::IAppleGameControllerXPauseHandlerProtocol* delegate);
     void setControllerXGamepadProfileAnalogDelegate(controllerX::IAppleGameControllerXGamepadProfileAnalogProtocol* delegate);
     void setControllerXGamepadProfileDigitalDelegate(controllerX::IAppleGameControllerXGamepadProfileDigitalProtocol* delegate);
+    void setControllerXExtendedGamepadProfileDelegate(controllerX::IAppleGameControllerXExtendedGamepadProfileProtocol* delegate);
     
     void startWirelessControllerDiscovery();
     void stopWirelessControllerDiscovery();
     bool anyControllerConnected();
     int connectedControllersCount();
     controllerX::AppleGameControllerX_SupportExtendedGamepad supportExtendedGamepadAt(int index);
+    
+    void unsetAllDelegates();
     
     void purgeInstance();
     static AppleGameControllerX* sharedInstance();
