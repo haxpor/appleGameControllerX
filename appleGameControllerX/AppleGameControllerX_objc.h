@@ -20,6 +20,20 @@
 @property (nonatomic, assign) controllerX::IAppleGameControllerXExtendedGamepadProfileAnalogProtocol* controllerX_extendedGamepadAnalogDelegate;
 @property (nonatomic, assign) controllerX::IAppleGameControllerXExtendedGamepadProfileDigitalProtocol* controllerX_extendedGamepadDigitalDelegate;
 
+#pragma mark - Polling
+@property (nonatomic, readonly) BOOL dpadLeftPressed;
+@property (nonatomic, readonly) BOOL dpadRightPressed;
+@property (nonatomic, readonly) BOOL dpadUpPressed;
+@property (nonatomic, readonly) BOOL dpadDownPressed;
+
+@property (nonatomic, readonly) BOOL buttonAPressed;
+@property (nonatomic, readonly) BOOL buttonBPressed;
+@property (nonatomic, readonly) BOOL buttonXPressed;
+@property (nonatomic, readonly) BOOL buttonYPressed;
+
+@property (nonatomic, readonly) BOOL leftShoulderPressed;
+@property (nonatomic, readonly) BOOL rightShoulderPressed;
+
 - (instancetype)init;
 - (void)startWirelessControllerDiscovery;
 - (void)stopWirelessControllerDiscovery;

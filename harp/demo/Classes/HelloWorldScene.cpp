@@ -140,6 +140,8 @@ bool HelloWorld::init()
     CCLOG("Device language (raw): %s", ccdeviceLocale_getLanguage());
     CCLOG("Device language (code): %d", ccdeviceLocale_getLanguageK());
     
+    this->scheduleUpdate();
+    
     // controller X
     AppleGameControllerX::sharedInstance()->setControllerXConnectionDelegate(this);
     AppleGameControllerX::sharedInstance()->setControllerXPauseHandlerDelegate(this);
@@ -149,6 +151,53 @@ bool HelloWorld::init()
     AppleGameControllerX::sharedInstance()->startWirelessControllerDiscovery();
     
     return true;
+}
+
+void HelloWorld::update(float dt)
+{
+    // test polling
+    if (AppleGameControllerX::sharedInstance()->isDPadLeftPressed())
+    {
+        CCLOG("Dpad left is pressed");
+    }
+    if (AppleGameControllerX::sharedInstance()->isDPadRightPressed())
+    {
+        CCLOG("Dpad right is pressed");
+    }
+    if (AppleGameControllerX::sharedInstance()->isDPadUpPressed())
+    {
+        CCLOG("Dpad up is pressed");
+    }
+    if (AppleGameControllerX::sharedInstance()->isDPadDownPressed())
+    {
+        CCLOG("Dpad down is pressed");
+    }
+    
+    if (AppleGameControllerX::sharedInstance()->isButtonAPressed())
+    {
+        CCLOG("Button A is pressed");
+    }
+    if (AppleGameControllerX::sharedInstance()->isButtonBPresses())
+    {
+        CCLOG("Button B is pressed");
+    }
+    if (AppleGameControllerX::sharedInstance()->isButtonXPressed())
+    {
+        CCLOG("Button X is pressed");
+    }
+    if (AppleGameControllerX::sharedInstance()->isButtonYPressed())
+    {
+        CCLOG("Button Y is pressed");
+    }
+    
+    if (AppleGameControllerX::sharedInstance()->isLeftShoulderPressed())
+    {
+        CCLOG("Left shoulder is pressed");
+    }
+    if (AppleGameControllerX::sharedInstance()->isRightShoulderPressed())
+    {
+        CCLOG("Right shoulder is pressed");
+    }
 }
 
 void HelloWorld::openFacebookURL(cocos2d::CCObject *pSender)
@@ -258,12 +307,13 @@ void HelloWorld::onGamepadProfile_rightShoulder_pressedChanged(float value, bool
 
 void HelloWorld::onExtendedGamepadProfile_leftThumbstick_valueChanged(float xValue, float yValue)
 {
-    CCLOG("Left thumbstick : %f %f", xValue, yValue);
+    //CCLOG("Left thumbstick : %f %f", xValue, yValue);
 }
 
 void HelloWorld::onExtendedGamepadProfile_rightThumbstick_valueChanged(float xValue, float yValue)
 {
-    CCLOG("Right thumbstick : %f %f", xValue, yValue);
+    // uncommen
+    //CCLOG("Right thumbstick : %f %f", xValue, yValue);
 }
 
 void HelloWorld::onExtendedGamepadProfile_leftTrigger_pressedChanged(float value, bool pressed)

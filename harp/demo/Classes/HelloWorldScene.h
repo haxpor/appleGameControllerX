@@ -16,6 +16,7 @@ public:
     static cocos2d::CCScene* scene();
     
     virtual void onExit();
+    virtual void update(float dt);
     
     // a selector callback
     void menuCloseCallback(CCObject* pSender);

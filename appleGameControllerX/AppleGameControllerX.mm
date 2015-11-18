@@ -70,6 +70,56 @@ void AppleGameControllerX::setControllerXExtendedGamepadProfileDigitalDelegate(c
     _controllerObjcPtr.controllerX_extendedGamepadDigitalDelegate = delegate;
 }
 
+bool AppleGameControllerX::isDPadLeftPressed()
+{
+    return _controllerObjcPtr.dpadLeftPressed ? true : false;
+}
+
+bool AppleGameControllerX::isDPadRightPressed()
+{
+    return _controllerObjcPtr.dpadRightPressed ? true : false;
+}
+
+bool AppleGameControllerX::isDPadUpPressed()
+{
+    return _controllerObjcPtr.dpadUpPressed ? true : false;
+}
+
+bool AppleGameControllerX::isDPadDownPressed()
+{
+    return _controllerObjcPtr.dpadDownPressed ? true : false;
+}
+
+bool AppleGameControllerX::isButtonAPressed()
+{
+    return _controllerObjcPtr.buttonAPressed ? true : false;
+}
+
+bool AppleGameControllerX::isButtonBPresses()
+{
+    return _controllerObjcPtr.buttonBPressed ? true : false;
+}
+
+bool AppleGameControllerX::isButtonXPressed()
+{
+    return _controllerObjcPtr.buttonXPressed ? true : false;
+}
+
+bool AppleGameControllerX::isButtonYPressed()
+{
+    return _controllerObjcPtr.buttonYPressed ? true : false;
+}
+
+bool AppleGameControllerX::isLeftShoulderPressed()
+{
+    return _controllerObjcPtr.leftShoulderPressed ? true : false;
+}
+
+bool AppleGameControllerX::isRightShoulderPressed()
+{
+    return _controllerObjcPtr.rightShoulderPressed ? true : false;
+}
+
 void AppleGameControllerX::startWirelessControllerDiscovery()
 {
     [_controllerObjcPtr startWirelessControllerDiscovery];

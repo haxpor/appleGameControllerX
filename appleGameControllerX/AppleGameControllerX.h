@@ -34,6 +34,19 @@ public:
     void setControllerXExtendedGamepadProfileAnalogDelegete(controllerX::IAppleGameControllerXExtendedGamepadProfileAnalogProtocol* delegate);
     void setControllerXExtendedGamepadProfileDigitalDelegate(controllerX::IAppleGameControllerXExtendedGamepadProfileDigitalProtocol* delegate);
     
+    bool isDPadLeftPressed();
+    bool isDPadRightPressed();
+    bool isDPadUpPressed();
+    bool isDPadDownPressed();
+    
+    bool isButtonAPressed();
+    bool isButtonBPresses();
+    bool isButtonXPressed();
+    bool isButtonYPressed();
+    
+    bool isLeftShoulderPressed();
+    bool isRightShoulderPressed();
+    
     void startWirelessControllerDiscovery();
     void stopWirelessControllerDiscovery();
     bool anyControllerConnected();

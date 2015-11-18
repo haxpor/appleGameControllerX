@@ -255,4 +255,55 @@
         return controllerX::kAppleGameControllerX_null;
 }
 
+#pragma mark - Polling
+- (BOOL)dpadLeftPressed
+{
+    return _controller.gamepad.dpad.left.pressed;
+}
+
+- (BOOL)dpadRightPressed
+{
+    return _controller.gamepad.dpad.right.pressed;
+}
+
+- (BOOL)dpadUpPressed
+{
+    return _controller.gamepad.dpad.up.pressed;
+}
+
+- (BOOL)dpadDownPressed
+{
+    return _controller.gamepad.dpad.down.pressed;
+}
+
+- (BOOL)buttonAPressed
+{
+    return _controller.gamepad.buttonA.pressed;
+}
+
+- (BOOL)buttonBPressed
+{
+    return _controller.gamepad.buttonB.pressed;
+}
+
+- (BOOL)buttonXPressed
+{
+    return _controller.gamepad.buttonX.pressed;
+}
+
+-(BOOL)buttonYPressed
+{
+    return _controller.gamepad.buttonY.pressed;
+}
+
+- (BOOL)leftShoulderPressed
+{
+    return _controller.gamepad.leftShoulder.pressed;
+}
+
+- (BOOL)rightShoulderPressed
+{
+    return _controller.gamepad.rightShoulder.pressed;
+}
+
 @end
