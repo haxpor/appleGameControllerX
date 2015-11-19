@@ -95,7 +95,7 @@ bool AppleGameControllerX::isButtonAPressed()
     return _controllerObjcPtr.buttonAPressed ? true : false;
 }
 
-bool AppleGameControllerX::isButtonBPresses()
+bool AppleGameControllerX::isButtonBPressed()
 {
     return _controllerObjcPtr.buttonBPressed ? true : false;
 }

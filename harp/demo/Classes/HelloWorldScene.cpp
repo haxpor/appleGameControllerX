@@ -177,7 +177,7 @@ void HelloWorld::update(float dt)
     {
         CCLOG("Button A is pressed");
     }
-    if (AppleGameControllerX::sharedInstance()->isButtonBPresses())
+    if (AppleGameControllerX::sharedInstance()->isButtonBPressed())
     {
         CCLOG("Button B is pressed");
     }

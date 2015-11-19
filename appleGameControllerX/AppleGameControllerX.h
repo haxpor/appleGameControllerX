@@ -40,7 +40,7 @@ public:
     bool isDPadDownPressed();
     
     bool isButtonAPressed();
-    bool isButtonBPresses();
+    bool isButtonBPressed();
     bool isButtonXPressed();
     bool isButtonYPressed();
     
