@@ -306,4 +306,24 @@
     return _controller.gamepad.rightShoulder.pressed;
 }
 
+- (float)leftThumbstickXAxisValue
+{
+    return _controller.extendedGamepad.leftThumbstick.xAxis.value;
+}
+
+- (float)leftThumbstickYAxisValue
+{
+    return _controller.extendedGamepad.leftThumbstick.yAxis.value;
+}
+
+- (float)rightThumbstickXAxisValue
+{
+    return _controller.extendedGamepad.rightThumbstick.xAxis.value;
+}
+
+- (float)rightThumbstickYAxisValue
+{
+    return _controller.extendedGamepad.rightThumbstick.yAxis.value;
+}
+
 @end

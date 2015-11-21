@@ -198,6 +198,18 @@ void HelloWorld::update(float dt)
     {
         CCLOG("Right shoulder is pressed");
     }
+    
+    if (AppleGameControllerX::sharedInstance()->leftThumbstickXAxisValue() != 0.0f &&
+        AppleGameControllerX::sharedInstance()->leftThumbstickYAxisValue() != 0.0f)
+    {
+        CCLOG("Left thumbstick: %.2f %.2f", AppleGameControllerX::sharedInstance()->leftThumbstickXAxisValue(), AppleGameControllerX::sharedInstance()->leftThumbstickYAxisValue());
+    }
+    
+    if (AppleGameControllerX::sharedInstance()->rightThumbstickXAxisValue() != 0.0f &&
+        AppleGameControllerX::sharedInstance()->rightThumbstickYAxisValue() != 0.0f)
+    {
+        CCLOG("Right thumbstick: %.2f %.2f", AppleGameControllerX::sharedInstance()->rightThumbstickXAxisValue(), AppleGameControllerX::sharedInstance()->rightThumbstickYAxisValue());
+    }
 }
 
 void HelloWorld::openFacebookURL(cocos2d::CCObject *pSender)

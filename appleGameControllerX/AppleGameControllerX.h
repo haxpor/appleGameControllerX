@@ -47,6 +47,11 @@ public:
     bool isLeftShoulderPressed();
     bool isRightShoulderPressed();
     
+    float leftThumbstickXAxisValue();
+    float leftThumbstickYAxisValue();
+    float rightThumbstickXAxisValue();
+    float rightThumbstickYAxisValue();
+    
     void startWirelessControllerDiscovery();
     void stopWirelessControllerDiscovery();
     bool anyControllerConnected();

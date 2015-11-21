@@ -34,6 +34,11 @@
 @property (nonatomic, readonly) BOOL leftShoulderPressed;
 @property (nonatomic, readonly) BOOL rightShoulderPressed;
 
+@property (nonatomic, readonly) float leftThumbstickXAxisValue;
+@property (nonatomic, readonly) float leftThumbstickYAxisValue;
+@property (nonatomic, readonly) float rightThumbstickXAxisValue;
+@property (nonatomic, readonly) float rightThumbstickYAxisValue;
+
 - (instancetype)init;
 - (void)startWirelessControllerDiscovery;
 - (void)stopWirelessControllerDiscovery;

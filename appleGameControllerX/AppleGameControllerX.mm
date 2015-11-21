@@ -120,6 +120,26 @@ bool AppleGameControllerX::isRightShoulderPressed()
     return _controllerObjcPtr.rightShoulderPressed ? true : false;
 }
 
+float AppleGameControllerX::leftThumbstickXAxisValue()
+{
+    return _controllerObjcPtr.leftThumbstickXAxisValue;
+}
+
+float AppleGameControllerX::leftThumbstickYAxisValue()
+{
+    return _controllerObjcPtr.leftThumbstickYAxisValue;
+}
+
+float AppleGameControllerX::rightThumbstickXAxisValue()
+{
+    return _controllerObjcPtr.rightThumbstickXAxisValue;
+}
+
+float AppleGameControllerX::rightThumbstickYAxisValue()
+{
+    return _controllerObjcPtr.rightThumbstickYAxisValue;
+}
+
 void AppleGameControllerX::startWirelessControllerDiscovery()
 {
     [_controllerObjcPtr startWirelessControllerDiscovery];
