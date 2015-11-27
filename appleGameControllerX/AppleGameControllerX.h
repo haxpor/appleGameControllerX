@@ -34,6 +34,14 @@ public:
     void setControllerXExtendedGamepadProfileAnalogDelegete(controllerX::IAppleGameControllerXExtendedGamepadProfileAnalogProtocol* delegate);
     void setControllerXExtendedGamepadProfileDigitalDelegate(controllerX::IAppleGameControllerXExtendedGamepadProfileDigitalProtocol* delegate);
     
+    controllerX::IAppleGameControllerXConnectionProtocol* getConnectionDelegate();
+    controllerX::IAppleGameControllerXPauseHandlerProtocol* getPauseHandlerDelegate();
+    controllerX::IAppleGameControllerXGamepadProfileAnalogProtocol* getGamepadProfileAnalogDelegate();
+    controllerX::IAppleGameControllerXGamepadProfileDigitalProtocol* getGamepadProfileDigitalDelegate();
+    controllerX::IAppleGameControllerXExtendedGamepadProfileProtocol* getExtendedGamepadProfileDelegate();
+    controllerX::IAppleGameControllerXExtendedGamepadProfileAnalogProtocol* getExtendedGamepadProfileAnalogDelegate();
+    controllerX::IAppleGameControllerXExtendedGamepadProfileDigitalProtocol* getExtendedGamepadProfileDigitalDelegate();
+    
     bool isDPadLeftPressed();
     bool isDPadRightPressed();
     bool isDPadUpPressed();

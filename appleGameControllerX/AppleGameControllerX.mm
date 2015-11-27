@@ -70,6 +70,41 @@ void AppleGameControllerX::setControllerXExtendedGamepadProfileDigitalDelegate(c
     _controllerObjcPtr.controllerX_extendedGamepadDigitalDelegate = delegate;
 }
 
+controllerX::IAppleGameControllerXConnectionProtocol* AppleGameControllerX::getConnectionDelegate()
+{
+    return _controllerObjcPtr.controllerX_connectionDelegate;
+}
+
+controllerX::IAppleGameControllerXPauseHandlerProtocol* AppleGameControllerX::getPauseHandlerDelegate()
+{
+    return _controllerObjcPtr.controllerX_pauseHandlerDelegate;
+}
+
+controllerX::IAppleGameControllerXGamepadProfileAnalogProtocol* AppleGameControllerX::getGamepadProfileAnalogDelegate()
+{
+    return _controllerObjcPtr.controllerX_gamepadAnalogDelegate;
+}
+
+controllerX::IAppleGameControllerXGamepadProfileDigitalProtocol* AppleGameControllerX::getGamepadProfileDigitalDelegate()
+{
+    return _controllerObjcPtr.controllerX_gamepadDigitalDelegate;
+}
+
+controllerX::IAppleGameControllerXExtendedGamepadProfileProtocol* AppleGameControllerX::getExtendedGamepadProfileDelegate()
+{
+    return _controllerObjcPtr.controllerX_extendedGamepadDelegate;
+}
+
+controllerX::IAppleGameControllerXExtendedGamepadProfileAnalogProtocol* AppleGameControllerX::getExtendedGamepadProfileAnalogDelegate()
+{
+    return _controllerObjcPtr.controllerX_extendedGamepadAnalogDelegate;
+}
+
+controllerX::IAppleGameControllerXExtendedGamepadProfileDigitalProtocol* AppleGameControllerX::getExtendedGamepadProfileDigitalDelegate()
+{
+    return _controllerObjcPtr.controllerX_extendedGamepadDigitalDelegate;
+}
+
 bool AppleGameControllerX::isDPadLeftPressed()
 {
     return _controllerObjcPtr.dpadLeftPressed ? true : false;

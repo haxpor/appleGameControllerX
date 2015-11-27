@@ -150,6 +150,21 @@ bool HelloWorld::init()
     AppleGameControllerX::sharedInstance()->setControllerXExtendedGamepadProfileDigitalDelegate(this);
     AppleGameControllerX::sharedInstance()->startWirelessControllerDiscovery();
     
+    if (AppleGameControllerX::sharedInstance()->getConnectionDelegate() != NULL)
+        printf("Connection delegate is set\n");
+    if (AppleGameControllerX::sharedInstance()->getPauseHandlerDelegate() != NULL)
+        printf("Pause handler delegate is set\n");
+    if (AppleGameControllerX::sharedInstance()->getGamepadProfileAnalogDelegate() != NULL)
+        printf("Gamepad analog delegate is set\n");
+    if (AppleGameControllerX::sharedInstance()->getGamepadProfileDigitalDelegate() != NULL)
+        printf("Gamepad digital delegate is set\n");
+    if (AppleGameControllerX::sharedInstance()->getExtendedGamepadProfileDelegate() != NULL)
+        printf("Extended gamepad delegate is set\n");
+    if (AppleGameControllerX::sharedInstance()->getExtendedGamepadProfileAnalogDelegate() != NULL)
+        printf("Extended gamepad - analog is set\n");
+    if (AppleGameControllerX::sharedInstance()->getExtendedGamepadProfileDigitalDelegate() != NULL)
+        printf("Extended gamepad - digital is set\n");
+    
     return true;
 }
 
